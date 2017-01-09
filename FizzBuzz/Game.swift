@@ -20,13 +20,13 @@ class Game: NSObject {
     }
     
     func play(input: String) -> Bool {
-        if isCorrect(input: input, number: score + 1) {
+        if matchesFizzBuzz(input: input, number: score + 1) {
             score += 1
         }
-        return isCorrect(input: input, number: score)
+        return matchesFizzBuzz(input: input, number: score)
     }
     
-    func isCorrect(input: String, number: Int) -> Bool {
+    func matchesFizzBuzz(input: String, number: Int) -> Bool {
         return input == brain.check(number: number)
     }
 }

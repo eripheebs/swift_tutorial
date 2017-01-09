@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdg-DY-2ng">
+                                <rect key="frame" x="223" y="598" width="136" height="39"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.29745069567259552" blue="0.50798643075972083" alpha="0.59552801724137927" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="17"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.9882352941176471" green="0.8901960784313725" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.35502307046979864" green="0.8901960784313725" blue="0.80484479865771807" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-x7-GUb">
+                                <rect key="frame" x="333" y="20" width="26" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZWP-AE-mBB">
+                                <rect key="frame" x="67" y="248" width="242" height="146"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdd-F2-WIc">
+                                    <size key="itemSize" width="57" height="54"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jo-L6-G91">
+                                <rect key="frame" x="90" y="257" width="77" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="0" backgroundImage="button_border"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nK-jc-kUG">
+                                <rect key="frame" x="182" y="257" width="76" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="button_border"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-fd-2Gf">
+                                <rect key="frame" x="86" y="320" width="81" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="button_border"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wck-oM-PTL">
+                                <rect key="frame" x="182" y="324" width="76" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" backgroundImage="button_border"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kdg-DY-2ng" secondAttribute="trailing" id="Fbu-us-9nl"/>
+                            <constraint firstItem="ZWP-AE-mBB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="Fvs-eu-jNl"/>
+                            <constraint firstItem="ZWP-AE-mBB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:1" id="IOu-1B-mEC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cq1-x7-GUb" secondAttribute="trailing" id="Ooc-1A-0Fc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kdg-DY-2ng" secondAttribute="bottom" constant="30" id="bAw-lP-Ill"/>
+                            <constraint firstItem="cq1-x7-GUb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ecT-pI-1qm"/>
+                            <constraint firstItem="ZWP-AE-mBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oFn-aZ-U9q"/>
+                            <constraint firstItem="ZWP-AE-mBB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tex-47-1bb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="95.802098950524751"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+    </resources>
 </document>
