@@ -1,6 +1,6 @@
 //
 //  GameTests.swift
-//  FizzBuzz
+//  FizzBuzzTests
 //
 //  Created by Pheby, Erika (UK - London) on 09/01/2017.
 //  Copyright © 2017 Pheby, Erika (UK - London). All rights reserved.
@@ -23,11 +23,7 @@ class GameTests: XCTestCase {
         super.tearDown()
     }
     
-    func thisIsTrue(){
-        XCTAssertEqual(true, true)
-    }
-    
-    func theGameStartsAtZero(){
+    func testTheGameStartsAtZero() {
         XCTAssertTrue(game.score == 0)
     }
     
