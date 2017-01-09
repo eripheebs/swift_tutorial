@@ -10,10 +10,23 @@ import Foundation
 
 class Game: NSObject {
     
-    var score = Int()
+    var score: Int
+    let brain: Brain
     
     override init() {
+        brain = Brain()
         score = 0
         super.init()
+    }
+    
+    func play(input: String) -> Bool {
+        if isCorrect(input: input, number: score + 1) {
+            score += 1
+        }
+        return isCorrect(input: input, number: score)
+    }
+    
+    func isCorrect(input: String, number: Int) -> Bool {
+        return input == brain.check(number: number)
     }
 }
