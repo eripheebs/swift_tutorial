@@ -19,12 +19,15 @@ class Game: NSObject {
         super.init()
     }
     
-    func play(input: String) -> Bool {
+    func play(input: String) -> (right: Bool, score: Int) {
         if matchesFizzBuzz(input: input, number: score + 1) {
             score += 1
+            return (true, score)
+        } else {
+            return(false, score)
         }
-        return matchesFizzBuzz(input: input, number: score)
     }
+
     
     func matchesFizzBuzz(input: String, number: Int) -> Bool {
         return input == brain.check(number: number)
