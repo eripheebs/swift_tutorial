@@ -28,40 +28,40 @@ class ViewControllerUnitTests: XCTestCase {
     }
     
     func testMove1IncrementsScore() {
-        viewController.play(move: "1")
+        viewController.play(move: Move.Number)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 1)
     }
     
     func testMove2IncrementScore() {
-        viewController.play(move: "1")
-        viewController.play(move: "2")
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Number)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 2)
     }
     
     func testMoveFizz() {
-        viewController.play(move: "1")
-        viewController.play(move: "2")
-        viewController.play(move: "Fizz")
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Fizz)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 3)
     }
     
     func testMoveBuzz() {
-        viewController.play(move: "1")
-        viewController.play(move: "2")
-        viewController.play(move: "Fizz")
-        viewController.play(move: "4")
-        viewController.play(move: "Buzz")
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Fizz)
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Buzz)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 5)
     }
     
     func testIncorrectMoveFizz() {
-        viewController.play(move: "1")
-        viewController.play(move: "2")
-        viewController.play(move: "3")
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Number)
+        viewController.play(move: Move.Number)
         let newScore = viewController.gameScore
         XCTAssertEqual(newScore, 2)
     }

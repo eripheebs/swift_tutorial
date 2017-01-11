@@ -14,16 +14,15 @@ class Brain: NSObject {
         return number % divisor == 0 
     }
     
-    func check(number: Int) -> String {
+    func check(number: Int) -> Move {
         if isDivisibleBy(divisor: 15, number: number){
-            print("HEEEEEEEEEEE!!!!!!!!!")
-            return "FizzBuzz"
+            return Move.FizzBuzz
         } else if isDivisibleBy(divisor: 3, number: number){
-            return "Fizz"
+            return Move.Fizz
         } else if isDivisibleBy(divisor: 5, number: number){
-            return "Buzz"
+            return Move.Buzz
         } else {
-            return "\(number)"
+            return Move.Number
         }
     }
     

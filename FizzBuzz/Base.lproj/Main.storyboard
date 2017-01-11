@@ -49,25 +49,42 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jo-L6-G91">
-                                <rect key="frame" x="90" y="257" width="77" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="0" backgroundImage="button_border"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nK-jc-kUG">
-                                <rect key="frame" x="182" y="257" width="76" height="59"/>
+                                <rect key="frame" x="182" y="253" width="76" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="button_border"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fizzButton"/>
+                                <state key="normal" title="Fizz" backgroundImage="button_border"/>
+                                <connections>
+                                    <action selector="fizzTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDe-dE-GIv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJL-fd-2Gf">
                                 <rect key="frame" x="86" y="320" width="81" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="button_border"/>
+                                <accessibility key="accessibilityConfiguration" identifier="buzzButton"/>
+                                <state key="normal" title="Buzz" backgroundImage="button_border"/>
+                                <connections>
+                                    <action selector="buzzTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lub-2u-gTF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wck-oM-PTL">
                                 <rect key="frame" x="182" y="324" width="76" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="button_border"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fizzBuzzButton"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="FizzBuzz" backgroundImage="button_border"/>
+                                <connections>
+                                    <action selector="fizzBuzzTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbl-kP-LVJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jo-L6-G91">
+                                <rect key="frame" x="90" y="257" width="77" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="numberButton"/>
+                                <state key="normal" title="0" backgroundImage="button_border"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpV-OA-Vgg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,6 +99,9 @@
                             <constraint firstItem="ZWP-AE-mBB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tex-47-1bb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberButton" destination="6Jo-L6-G91" id="oNx-hT-sDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

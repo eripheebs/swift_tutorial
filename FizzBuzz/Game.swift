@@ -19,7 +19,7 @@ class Game: NSObject {
         super.init()
     }
     
-    func play(input: String) -> (right: Bool, score: Int) {
+    func play(input: Move) -> (right: Bool, score: Int) {
         if matchesFizzBuzz(input: input, number: score + 1) {
             score += 1
             return (true, score)
@@ -29,7 +29,7 @@ class Game: NSObject {
     }
 
     
-    func matchesFizzBuzz(input: String, number: Int) -> Bool {
+    func matchesFizzBuzz(input: Move, number: Int) -> Bool {
         return input == brain.check(number: number)
     }
 }

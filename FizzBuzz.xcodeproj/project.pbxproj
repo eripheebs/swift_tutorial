@@ -18,6 +18,7 @@
 		DB37F8951E23B4C700BE6292 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB37F8941E23B4C700BE6292 /* GameTests.swift */; };
 		DB37F8981E23F31D00BE6292 /* ViewControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB37F8971E23F31D00BE6292 /* ViewControllerUnitTests.swift */; };
 		DB37F89A1E2685E000BE6292 /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB37F8991E2685E000BE6292 /* ViewControllerUITests.swift */; };
+		DB37F89C1E268D8C00BE6292 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB37F89B1E268D8C00BE6292 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DB37F8941E23B4C700BE6292 /* GameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		DB37F8971E23F31D00BE6292 /* ViewControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUnitTests.swift; sourceTree = "<group>"; };
 		DB37F8991E2685E000BE6292 /* ViewControllerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
+		DB37F89B1E268D8C00BE6292 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				DB37F8601E23A55F00BE6292 /* AppDelegate.swift */,
 				DB37F8621E23A55F00BE6292 /* ViewController.swift */,
+				DB37F89B1E268D8C00BE6292 /* Move.swift */,
 				DB37F8641E23A55F00BE6292 /* Main.storyboard */,
 				DB37F8671E23A55F00BE6292 /* Assets.xcassets */,
 				DB37F8691E23A55F00BE6292 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB37F89C1E268D8C00BE6292 /* Move.swift in Sources */,
 				DB37F8631E23A55F00BE6292 /* ViewController.swift in Sources */,
 				DB37F88F1E23A5A300BE6292 /* Brain.swift in Sources */,
 				DB37F8611E23A55F00BE6292 /* AppDelegate.swift in Sources */,
